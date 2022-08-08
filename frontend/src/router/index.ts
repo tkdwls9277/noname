@@ -1,27 +1,57 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 
-import HomeView from "@/views/HomeView.vue";
-import menuState from "../store/state/menus";
+import Index from "@/views/HomeView.vue";
+import Page2_1 from "@/views/AboutView.vue";
+// import menuState from "@/store/state/menus.ts";
+import Menus from "@/component/MenusBar.vue";
 
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
     {
         path: "/",
-        name: "home",
-        component: {
-            menu: menuState,
-            content: HomeView,
+        name: "Index",
+        components: {
+            menu: Menus,
+            content: Index,
         },
     },
     {
-        path: "/about",
-        name: "about",
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+        path: "/Page2_1",
+        name: "Page2_1",
+        components: {
+            menu: Menus,
+            content: Page2_1,
+        },
+    },
+    {
+        path: "/Page2_2",
+        name: "Page2_2",
+        components: {
+            menu: Menus,
+            content: {
+                template: `
+            <div style="width: 100%;
+            height: 100%;
+            background-color: green;">test</div>
+          `,
+            },
+        },
+    },
+    {
+        path: "/Page3",
+        name: "Page3",
+        components: {
+            menu: Menus,
+            content: {
+                template: `
+            <div style="width: 100%;
+            height: 100%;
+            background-color: gray;">test</div>
+          `,
+            },
+        },
     },
 ];
 

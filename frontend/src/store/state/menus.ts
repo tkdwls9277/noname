@@ -36,4 +36,4 @@ const menuState = {
     ],
 };
 
-export default menuState;
+export default menuState as any;

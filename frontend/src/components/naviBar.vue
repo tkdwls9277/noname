@@ -43,7 +43,26 @@
         </v-card>
     </div>
 </template>
-<script>
-export default {};
+<script lang="ts">
+import Vue from "vue";
+import axios from "axios";
+
+export default Vue.extend({
+    created() {
+        this.getTodoList();
+    },
+    methods: {
+        getTodoList: function () {
+            axios
+                .get("https://todo-list.loca.lt/list")
+                .then((res) => {
+                    console.log(res.data);
+                })
+                .catch((ex) => {
+                    console.log("list get error", ex);
+                });
+        },
+    },
+});
 </script>
 <style lang=""></style>
