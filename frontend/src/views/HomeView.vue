@@ -1,6 +1,11 @@
 <template>
+    <v-content>
+        home 화면 입니다.
+        <div style="background=red">home</div>
+        <navi-bar />
+    </v-content>
+
     <!--<hello-world />-->
-    <navi-bar />
 </template>
 
 <script lang="ts">
@@ -12,8 +17,9 @@ export default Vue.extend({
     name: "homeView",
 
     components: {
-        // HelloWorld,
         naviBar,
+        // HelloWorld,
+        // naviBar,
     },
 });
 </script>
