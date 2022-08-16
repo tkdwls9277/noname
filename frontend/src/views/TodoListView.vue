@@ -1,7 +1,16 @@
 <template lang="">
-    <div>todo 입니다.</div>
+    <v-content>
+        <todo-input />
+        <todo-list />
+    </v-content>
 </template>
-<script>
-export default {};
+<script lang="ts">
+import Vue from "vue";
+import TodoList from "@/components/todoList/todoList.vue";
+export default Vue.extend({
+    components: {
+        TodoList,
+    },
+});
 </script>
 <style lang=""></style>

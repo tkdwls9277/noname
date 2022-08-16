@@ -15,6 +15,7 @@
 
             <div target="_blank">오른쪽</div>
         </v-app-bar>
+        <router-view />
     </v-app>
 </template>
 
