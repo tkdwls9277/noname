@@ -1,12 +1,12 @@
-export interface data {
-    id: number;
-    date: string | Date;
-    title: string;
-    content: string | null;
-    done: boolean;
-}
+// export interface data {
+//     id: number;
+//     date: string | Date;
+//     title: string;
+//     content: string | null;
+//     done: boolean;
+// }
 
-export interface list {
+export default interface list {
     id: number;
     date: string | Date;
     title: string;

@@ -1,11 +1,18 @@
 import axios from "axios";
+import list from "../dataDto";
+// import list from "@/components/dataDto.ts";
 
-export default function getList() {
+/**
+ * 서버에서 전체적인 todo 데이터를 가져오는 함수
+ * @param
+ * @returns
+ */
+export default function getList(): any {
     axios
-        .get("https://todo-list.loca.lt/list")
+        .get("/list")
         .then((res) => {
             console.log(res.data);
-            return res.data;
+            return res.data.list;
         })
         .catch((ex) => {
             console.log("list get error", ex);
@@ -24,6 +31,6 @@ export default function getList() {
                     content: "test22 test22",
                     done: true,
                 },
-            ];
+            ] as list[];
         });
 }
