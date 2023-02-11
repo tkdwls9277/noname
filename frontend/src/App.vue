@@ -7,7 +7,7 @@
                 <v-tabs align-with-title>
                     <v-tab to="/">home</v-tab>
                     <v-tab to="todoList">todoList</v-tab>
-                    <v-tab>Tab 3</v-tab>
+                    <v-tab to="">for next Project</v-tab>
                 </v-tabs>
             </template>
 

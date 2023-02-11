@@ -7,8 +7,8 @@ import list from "../dataDto";
  * @param
  * @returns
  */
-export default function getList(): any {
-    axios
+export default async function getList() {
+    return await axios
         .get("/list")
         .then((res) => {
             console.log(res.data);
@@ -20,14 +20,21 @@ export default function getList(): any {
                 {
                     id: 0,
                     date: new Date(),
-                    title: "test data",
+                    title: "plus표시 클릭 시 insert api 호출",
                     content: "test test",
                     done: false,
                 },
                 {
                     id: 1,
                     date: new Date(),
-                    title: "test data2",
+                    title: "done 상태에 따라 체크와 가운데 줄",
+                    content: "test22 test22",
+                    done: true,
+                },
+                {
+                    id: 2,
+                    date: new Date(),
+                    title: "엑스표시 클릭 시 delete api 호출",
                     content: "test22 test22",
                     done: true,
                 },

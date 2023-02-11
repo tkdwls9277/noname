@@ -8,11 +8,16 @@
         </div>
     </form>
 </template>
+
 <script lang="ts">
 import Vue from "vue";
 
-export default Vue.extend({});
+export default Vue.extend({
+    name: "todoInput",
+    components: {},
+});
 </script>
+
 <style lang="scss">
 h1 {
     font-size: 100px;

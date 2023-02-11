@@ -8,10 +8,12 @@
         </div>
         <ul class="todo-list">
             <li class="todo">
-                <v-checkbox v-model="selectedList" label="test" value="test"></v-checkbox>
+                <!-- <v-checkbox v-model="selectedList" label="test" value="test"></v-checkbox> -->
                 <div v-for="(item, i) in listData" :key="i" class="view">
                     <v-checkbox v-model="selectedList" :label="item.title" :value="item.content"></v-checkbox>
                 </div>
+                <v-checkbox v-model="testList" :label="testCheck"></v-checkbox>
+                <v-checkbox v-model="testList" :label="testCheck"></v-checkbox>
             </li>
         </ul>
     </form>
@@ -25,6 +27,8 @@ export default Vue.extend({
     data: () => ({
         listData: [],
         selectedList: [],
+        testList: [],
+        testCheck: "test",
     }),
     created: async function () {
         console.log("여기서 부름");

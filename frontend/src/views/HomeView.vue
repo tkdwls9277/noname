@@ -1,6 +1,7 @@
 <template>
     <v-content>
         <div>home</div>
+        <div>설명을 적기 위한 부분입니다.</div>
     </v-content>
 </template>
 

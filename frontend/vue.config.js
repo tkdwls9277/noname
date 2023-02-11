@@ -9,7 +9,7 @@ module.exports = {
     // }
     proxy: {
       '/': {
-        "target": 'https://todo-list.loca.lt',
+        "target": 'http://ec2-3-38-245-56.ap-northeast-2.compute.amazonaws.com/',
         "pathRewrite": {
           '^/': ''
         },
